@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? 💗</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Background Icons -->
+    <div id="floating-icons" class="floating-container" aria-hidden="true"></div>
+
+    <!-- Glassmorphism Navigation -->
+    <nav class="navbar" role="navigation">
+        <div class="nav-content">
+            <span class="nav-title">💗 Valentine 2026</span>
+        </div>
+    </nav>
+
+    <!-- Section A: Hero Landing -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                I made something<br>
+                <span class="highlight">for you 💗</span>
+            </h1>
+            <p class="hero-subtitle">
+                Distance means so little when you mean so much
+            </p>
+            <button id="start-btn" class="btn btn-primary">
+                Start 💌
+            </button>
+        </div>
+    </section>
+
+    <!-- Section B: Mini Story (3 Cards) -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-card" data-card="1">
+                    <div class="card-icon">🌍</div>
+                    <h3>Distance can't stop us</h3>
+                    <p>Miles apart but hearts connected, our love transcends every boundary.</p>
+                </div>
+                
+                <div class="story-card" data-card="2">
+                    <div class="card-icon">✨</div>
+                    <h3>Favorite moments</h3>
+                    <p>Every laugh, every message, every call – you make ordinary moments magical.</p>
+                </div>
+                
+                <div class="story-card" data-card="3">
+                    <div class="card-icon">💕</div>
+                    <h3>Reasons I adore you</h3>
+                    <p>Your kindness, your smile, your spirit – there are infinite reasons why I love you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section C: Interactive Warm-up -->
+    <section id="warmup" class="warmup-section">
+        <div class="container">
+            <div class="warmup-content">
+                <h2 class="section-title">Fill our love meter 💗</h2>
+                <p class="section-subtitle">Tap the hearts to unlock the question</p>
+                
+                <div class="love-meter-container">
+                    <div class="love-meter">
+                        <div id="love-meter-fill" class="love-meter-fill"></div>
+                        <span class="love-meter-text" id="love-meter-percent">0%</span>
+                    </div>
+                    
+                    <div class="heart-buttons">
+                        <button class="heart-btn" aria-label="Add love">💗</button>
+                        <button class="heart-btn" aria-label="Add love">💗</button>
+                        <button class="heart-btn" aria-label="Add love">💗</button>
+                        <button class="heart-btn" aria-label="Add love">💗</button>
+                        <button class="heart-btn" aria-label="Add love">💗</button>
+                    </div>
+                </div>
+                
+                <div id="unlock-message" class="unlock-message hidden">
+                    <p>✨ Ready for the big question? ✨</p>
+                    <button id="reveal-btn" class="btn btn-secondary">
+                        Continue 💕
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section D: Final Question -->
+    <section id="question" class="question-section hidden">
+        <div class="container">
+            <div class="question-content">
+                <!-- The Book/Card -->
+                <div class="valentine-card">
+                    <div class="card-inner">
+                        <h2 class="question-title">Will you be my Valentine? 💗</h2>
+                        
+                        <!-- Playful Message -->
+                        <p id="playful-message" class="playful-message"></p>
+                        
+                        <!-- Button Container (for proximity detection) -->
+                        <div id="button-container" class="button-container">
+                            <button id="yes-btn" class="btn btn-yes">
+                                YES! 💕
+                            </button>
+                            <button id="no-btn" class="btn btn-no">
+                                No
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Overlay -->
+    <div id="success-overlay" class="success-overlay hidden">
+        <div class="success-content">
+            <h1 class="success-title">Yayyy 💗</h1>
+            <p class="success-message">I'm the luckiest person in the world!</p>
+            <div class="date-plan">
+                <h3>Let's make this Valentine's special ✨</h3>
+                <p>Even across the miles, we'll celebrate our love together</p>
+            </div>
+        </div>
+        <!-- Confetti hearts will be spawned here -->
+        <div id="confetti-container" class="confetti-container"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
